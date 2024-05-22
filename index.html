@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik - Kalkulator Segitiga</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Katik</h1>
+        <p>Sebuah web app sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+        <div class="button-container">
+            <button onclick="showSection('luas')">Segitiga</button>
+            <button onclick="showSection('keliling')">Jajar Genjang</button>
+        </div>
+
+        <div id="luas-segitiga" class="section">
+            <h2>Luas Segitiga</h2>
+            <img src="resources\62288763c6d64.png" alt="Segitiga">
+            <p>Rumus Luas Segitiga yaitu:</p>
+            <p>L = 1/2 x a x t</p>
+            <form id="luasForm">
+                <label for="alas">Alas (a):</label>
+                <input type="number" id="alas" required>
+                <label for="tinggi">Tinggi (t):</label>
+                <input type="number" id="tinggi" required>
+                <button type="button" onclick="hitungLuas()">Hitung</button>
+            </form>
+            <p id="hasilLuas"></p>
+        </div>
+
+        <div id="keliling-segitiga" class="section" style="display:none;">
+            <h2>Keliling Segitiga</h2>
+            <img src="resources\62288763c6d64.png" alt="Segitiga">
+            <p>Rumus Keliling Segitiga yaitu:</p>
+            <p>K = S1 + S2 + S3</p>
+            <form id="kelilingForm">
+                <label for="sisi1">Sisi A (S1):</label>
+                <input type="number" id="sisi1" required>
+                <label for="sisi2">Sisi B (S2):</label>
+                <input type="number" id="sisi2" required>
+                <label for="sisi3">Sisi C (S3):</label>
+                <input type="number" id="sisi3" required>
+                <button type="button" onclick="hitungKeliling()">Hitung</button>
+            </form>
+            <p id="hasilKeliling"></p>
+        </div>
+    </div>
+    <script src="js\script.js"></script>
+</body>
+</html>
